@@ -1,0 +1,50 @@
+@font-face {
+    src: url(../fonts/Inter-Regular.ttf);
+}
+
+@font-face {
+    src: url(../fonts/Inter-SemiBold.ttf);
+}
+
+@font-face {
+    src: url(../fonts/Inter-ExtraBold.ttf);
+}
+
+.overlay-panel {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 8px;
+    -fx-effect: dropshadow(two-pass-box, rgba(0, 0, 0, 0.15), 10, 0, 0, 0);
+}
+
+.dim-background {
+    -fx-background-color: rgba(65, 65, 65, 0.8);
+}
+
+.btn-settings {
+    -fx-background-color: transparent;
+
+    -fx-font-family: "Inter SemiBold";
+    -fx-font-size: 17px;
+    -fx-font-style: normal;
+    -fx-font-weight: 600;
+    -fx-text-alignment: center;
+}
+
+.btn-logout {
+    -fx-background-color: #EC4B4B;
+    -fx-background-radius: 0px 0px 8px 8px;
+
+    -fx-font-family: "Inter ExtraBold";
+    -fx-font-size: 17px;
+    -fx-font-style: normal;
+    -fx-font-weight: 800;
+    -fx-text-alignment: center;
+}
+
+.account_text {
+    -fx-font-family: "Inter SemiBold";
+    -fx-font-size: 17px;
+    -fx-font-style: normal;
+    -fx-font-weight: 600;
+    -fx-text-alignment: center;
+}

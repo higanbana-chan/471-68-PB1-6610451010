@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="750.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/17.0.6" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cs211.project.controllers.UserDetailsViewController">
+    <children>
+
+        <!-- User Information -->
+        <VBox alignment="CENTER" layoutX="179.0" layoutY="31.0" prefHeight="671.0" prefWidth="526.0" spacing="20">
+            <ImageView fitHeight="1.0" fitWidth="150.0">
+                <!-- Placeholder Image, replace with your own -->
+            </ImageView>
+         <AnchorPane prefHeight="309.0" prefWidth="527.0" stylesheets="@css/style.css">
+            <children>
+                  <Label fx:id="userUsername" layoutX="22.0" layoutY="14.0" text="USER’S NAME">
+                      <font>
+                          <Font name="System Bold" size="24.0" />
+                      </font>
+                  </Label>
+                  <HBox layoutX="11.0" layoutY="69.0" prefHeight="52.0" prefWidth="510.0" spacing="40.0">
+                      <TextField fx:id="firstName" alignment="CENTER" editable="false" prefHeight="59.0" prefWidth="228.0" promptText="FIRST NAME" styleClass="bg-radius" stylesheets="@css/style.css">
+                     <font>
+                        <Font size="16.0" />
+                     </font></TextField>
+                      <TextField fx:id="lastName" alignment="CENTER" editable="false" prefHeight="59.0" prefWidth="228.0" promptText="LAST NAME" styleClass="bg-radius" stylesheets="@css/style.css">
+                     <font>
+                        <Font size="16.0" />
+                     </font></TextField>
+                  </HBox>
+                  <HBox layoutX="7.0" layoutY="150.0" prefHeight="52.0" prefWidth="519.0" spacing="50">
+                      <TextField fx:id="email" alignment="CENTER" editable="false" prefHeight="52.0" prefWidth="234.0" promptText="EMAIL" styleClass="bg-radius" stylesheets="@css/style.css">
+                     <font>
+                        <Font size="16.0" />
+                     </font></TextField>
+                  </HBox>
+                  <TextField fx:id="accountCreationDate" alignment="CENTER" editable="false" layoutX="9.0" layoutY="229.0" prefHeight="52.0" prefWidth="230.0" promptText="ACCOUNT CREATION DATE" styleClass="bg-radius" stylesheets="@css/style.css">
+                  <font>
+                     <Font size="16.0" />
+                  </font>
+               </TextField>
+               <Label layoutX="22.0" layoutY="49.0" text="FIRST NAME" />
+               <Label layoutX="303.0" layoutY="49.0" text="LAST NAME" />
+               <Label layoutX="23.0" layoutY="130.0" text="EMAIL" />
+               <Label layoutX="23.0" layoutY="211.0" text="ACCOUNT CREATION DATE" />
+               <Circle fx:id="profilePicture" fill="WHITE" layoutX="392.0" layoutY="211.0" radius="67.0" stroke="#ffffff00" strokeType="INSIDE" />
+            </children>
+            <styleClass>
+               <String fx:value="bg-gray" />
+               <String fx:value="bg-radius" />
+            </styleClass>
+         </AnchorPane>
+   
+            <!-- Event Management -->
+            <ScrollPane prefHeight="338.0" prefWidth="526.0" styleClass="bg-transparent" stylesheets="@css/style.css">
+                <VBox fx:id="eventInManagement" prefHeight="422.0" prefWidth="510.0" spacing="10.0" stylesheets="@css/style.css" />
+            </ScrollPane>
+        </VBox>
+         <VBox alignment="CENTER" layoutX="772.0" layoutY="91.0" prefHeight="117.0" prefWidth="311.0" styleClass="btn-lightblue" stylesheets="@css/style.css">
+         <children>
+            <Label fx:id="lastLoggedInLabel" alignment="CENTER" styleClass="normal_text-semibold" text="lastLoggedInLabel">
+               <font>
+                  <Font name="System Bold" size="35.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <Label layoutX="772.0" layoutY="40.0" text="LOGIN HISTORY">
+         <font>
+            <Font name="System Bold" size="35.0" />
+         </font>
+      </Label>
+      <AnchorPane prefHeight="750.0" prefWidth="100.0" styleClass="bg-lightblue" stylesheets="@css/style.css">
+         <children>
+            <Button fx:id="goHome" layoutX="12.0" layoutY="346.0" mnemonicParsing="false" onAction="#onClickGoHomeButton" prefHeight="74.0" prefWidth="75.0" styleClass="bg-transparent" stylesheets="@css/style.css">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/home-icon.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="signOutButton" layoutX="19.0" layoutY="650.0" mnemonicParsing="false" onAction="#onClickSignOutButton" prefHeight="79.0" prefWidth="62.0" text="SIGN OUT" textFill="WHITE" wrapText="true">
+               <styleClass>
+                  <String fx:value="bg-red" />
+                  <String fx:value="bg-radius" />
+               </styleClass>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </AnchorPane>
+
+    </children>
+</AnchorPane>

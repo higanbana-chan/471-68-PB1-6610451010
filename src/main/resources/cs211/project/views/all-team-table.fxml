@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.MotionBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="750.0" prefWidth="1200.0" stylesheets="@css/style.css" xmlns="http://javafx.com/javafx/17.0.6" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cs211.project.controllers.AllTeamTableControllers">
+   <children>
+      <Pane prefHeight="750.0" prefWidth="1200.0" styleClass="main_bg" stylesheets="@css/style.css">
+         <children>
+            <Label layoutX="104.0" layoutY="48.0" text="All Team Table">
+               <font>
+                  <Font size="34.0" />
+               </font>
+            </Label>
+            <TableView fx:id="allTeamTableView" layoutX="104.0" layoutY="116.0" prefHeight="518.0" prefWidth="992.0">
+               <columns>
+                  <TableColumn prefWidth="75.0" text="C1" />
+               </columns>
+            </TableView>
+            <Button fx:id="addButton" layoutX="920.0" layoutY="670.0" mnemonicParsing="false" onAction="#onAddTeamButtonClick" prefHeight="60.0" prefWidth="248.0" style="-fx-background-color: Lime green;" styleClass="bg-radius" stylesheets="@css/style.css" text="ADD TEAM" textFill="WHITE">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Button>
+            <Button layoutX="41.0" layoutY="692.0" mnemonicParsing="false" onAction="#onBackButtonClick" prefHeight="36.0" prefWidth="110.0" style="-fx-background-color: gray;" styleClass="bg-radius" stylesheets="@css/style.css" text="Back">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="1140.0" layoutY="10.0" onMouseClicked="#onHomePageClick" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/home-icon.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane fx:id="blurPane" opacity="0.7" prefHeight="750.0" prefWidth="1200.0" styleClass="main_bg" stylesheets="@css/style.css" visible="false">
+         <effect>
+            <MotionBlur angle="360.0" radius="63.0" />
+         </effect>
+      </Pane>
+      <AnchorPane fx:id="AddTeamAnchorPane" prefHeight="750.0" prefWidth="1200.0">
+         <children>
+            <Pane layoutX="150.0" layoutY="75.0" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: white;" styleClass="bg-radius">
+               <children>
+                  <VBox prefHeight="600.0" prefWidth="900.0">
+                     <children>
+                        <Pane prefHeight="140.0" prefWidth="900.0">
+                           <children>
+                              <Label layoutX="321.0" layoutY="45.0" text="ADD NEW TEAM" textFill="#00f570">
+                                 <font>
+                                    <Font size="35.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="90.0" prefWidth="900.0">
+                           <children>
+                              <Label layoutX="30.0" layoutY="19.0" text="Team Name: ">
+                                 <font>
+                                    <Font size="35.0" />
+                                 </font>
+                              </Label>
+                              <Pane layoutX="300.0" layoutY="1.0" prefHeight="88.0" prefWidth="485.0" style="-fx-background-color: gray;" styleClass="bg-radius">
+                                 <children>
+                                    <TextField fx:id="addTeamNameTextField" layoutX="14.0" layoutY="10.0" prefHeight="68.0" prefWidth="460.0" styleClass="bg-radius" />
+                                 </children>
+                              </Pane>
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="37.0" prefWidth="900.0" />
+                        <Pane prefHeight="90.0" prefWidth="900.0">
+                           <children>
+                              <Pane layoutX="300.0" layoutY="1.0" prefHeight="88.0" prefWidth="485.0" style="-fx-background-color: gray;" styleClass="bg-radius">
+                                 <children>
+                                    <TextField fx:id="addTeamCapacityTextField" layoutX="14.0" layoutY="10.0" prefHeight="68.0" prefWidth="460.0" styleClass="bg-radius" />
+                                 </children>
+                              </Pane>
+                              <Label layoutX="30.0" layoutY="19.0" text="Team Capacity: ">
+                                 <font>
+                                    <Font size="35.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="146.0" prefWidth="900.0">
+                           <children>
+                              <Pane prefHeight="90.0" prefWidth="900.0">
+                                 <children>
+                                    <Label layoutX="30.0" layoutY="35.0" text="Start: ">
+                                       <font>
+                                          <Font size="35.0" />
+                                       </font>
+                                    </Label>
+                                    <DatePicker fx:id="start" layoutX="119.0" layoutY="46.0" prefHeight="30.0" prefWidth="204.0" />
+                                    <Label layoutX="374.0" layoutY="35.0" text="End: ">
+                                       <font>
+                                          <Font size="35.0" />
+                                       </font>
+                                    </Label>
+                                    <DatePicker fx:id="end" layoutX="449.0" layoutY="46.0" prefHeight="30.0" prefWidth="204.0" />
+                                 </children>
+                              </Pane>
+                           </children></Pane>
+                        <Pane prefHeight="95.0" prefWidth="900.0">
+                           <children>
+                              <Button layoutX="490.0" layoutY="26.0" mnemonicParsing="false" onAction="#onCancelButtonClick" prefWidth="180.0" style="-fx-background-color: Red;" styleClass="bg-radius" text="CANCEL" textFill="WHITE">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Button>
+                              <Button layoutX="690.0" layoutY="26.0" mnemonicParsing="false" onAction="#onAddNewTeamButtonClick" prefWidth="180.0" style="-fx-background-color: Lime Green;" styleClass="bg-radius" text="ADD" textFill="WHITE">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Button>
+                              <Label fx:id="errorLabel" layoutX="20.0" layoutY="36.0" text="Label" textFill="RED">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                     </children>
+                  </VBox>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="whenSelectRecordAnchorPane" prefHeight="750.0" prefWidth="1200.0" visible="false">
+         <children>
+            <Pane layoutX="380.0" layoutY="247.0" prefHeight="280.0" prefWidth="500.0" style="-fx-background-color: gray;" styleClass="bg-radius">
+               <children>
+                  <Button layoutX="87.0" layoutY="25.0" mnemonicParsing="false" onAction="#onSeeDetailButtonClick" prefHeight="60.0" prefWidth="325.0" style="-fx-background-color: Orange;" styleClass="bg-radius" text="See detail this team" textFill="WHITE">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="87.0" layoutY="110.0" mnemonicParsing="false" onAction="#onTeamScheduleButtonClick" prefHeight="60.0" prefWidth="325.0" style="-fx-background-color: purple;" styleClass="bg-radius" text="Team Schedule" textFill="WHITE">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="87.0" layoutY="195.0" mnemonicParsing="false" onAction="#onEditButtonClick" prefHeight="60.0" prefWidth="325.0" style="-fx-background-color: #002ff7;" styleClass="bg-radius" text="Edit" textFill="WHITE">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="451.0" layoutY="4.0" mnemonicParsing="false" onAction="#OnXButtonClick" prefHeight="23.0" prefWidth="44.0" styleClass="circle-button" stylesheets="@css/style.css" text="X" textFill="#030303">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="editTeamAnchorPane" prefHeight="750.0" prefWidth="1200.0" visible="false">
+         <children>
+            <Pane layoutX="150.0" layoutY="75.0" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: white;" styleClass="bg-radius">
+               <children>
+                  <VBox prefHeight="600.0" prefWidth="900.0">
+                     <children>
+                        <Pane prefHeight="140.0" prefWidth="900.0">
+                           <children>
+                              <Label layoutX="421.0" layoutY="43.0" text="Edit" textFill="#002ff7">
+                                 <font>
+                                    <Font size="35.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="90.0" prefWidth="900.0">
+                           <children>
+                              <Label layoutX="30.0" layoutY="19.0" text="Team Name: ">
+                                 <font>
+                                    <Font size="35.0" />
+                                 </font>
+                              </Label>
+                              <Pane layoutX="300.0" layoutY="1.0" prefHeight="88.0" prefWidth="485.0" style="-fx-background-color: gray;" styleClass="bg-radius">
+                                 <children>
+                                    <TextField fx:id="editTeamNameTextField" layoutX="14.0" layoutY="10.0" prefHeight="68.0" prefWidth="460.0" styleClass="bg-radius" />
+                                 </children>
+                              </Pane>
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="72.0" prefWidth="900.0" />
+                        <Pane prefHeight="90.0" prefWidth="900.0">
+                           <children>
+                              <Pane layoutX="300.0" layoutY="1.0" prefHeight="88.0" prefWidth="485.0" style="-fx-background-color: gray;" styleClass="bg-radius">
+                                 <children>
+                                    <TextField fx:id="editTeamCapacityTextField" layoutX="14.0" layoutY="10.0" prefHeight="68.0" prefWidth="460.0" styleClass="bg-radius" />
+                                 </children>
+                              </Pane>
+                              <Label layoutX="30.0" layoutY="19.0" text="Team Capacity: ">
+                                 <font>
+                                    <Font size="35.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="132.0" prefWidth="900.0" />
+                        <Pane prefHeight="95.0" prefWidth="900.0">
+                           <children>
+                              <Button layoutX="490.0" layoutY="26.0" mnemonicParsing="false" onAction="#onCancelButtonClick" prefWidth="180.0" style="-fx-background-color: Red;" styleClass="bg-radius" text="CANCEL" textFill="WHITE">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Button>
+                              <Button layoutX="690.0" layoutY="26.0" mnemonicParsing="false" onAction="#onConfirmEditButtonClick" prefWidth="180.0" style="-fx-background-color: Lime Green;" styleClass="bg-radius" text="CONFIRM" textFill="WHITE">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Button>
+                              <Label fx:id="errorEditLabel" layoutX="20.0" layoutY="36.0" text="Label" textFill="RED">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                     </children>
+                  </VBox>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

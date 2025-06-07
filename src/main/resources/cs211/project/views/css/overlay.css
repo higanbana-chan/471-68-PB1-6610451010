@@ -1,0 +1,107 @@
+@font-face {
+    src: url(../fonts/ReemKufi-SemiBold.ttf);
+}
+
+@font-face {
+    src: url(../fonts/ReemKufi-Bold.ttf);
+}
+
+@font-face {
+    src: url(../fonts/Inter-Regular.ttf);
+}
+
+.overlay-panel {
+    -fx-background-color: #D9D9D9;
+    -fx-background-radius: 12px;
+}
+
+.dim-background {
+    -fx-background-color: rgba(65, 65, 65, 0.8);
+}
+
+.btn-gradient {
+    -fx-background-color: linear-gradient(from 30% 30% to 70% 70%, #0085FF, #3B9EFA);
+    -fx-background-radius: 24px;
+
+    -fx-font-family: "Reem Kufi Bold";
+    -fx-font-size: 15px;
+    -fx-font-style: normal;
+    -fx-font-weight: 700;
+    -fx-text-alignment: center;
+}
+
+.btn-confirm {
+    -fx-background-color: #4EA7F9;
+    -fx-background-radius: 24px;
+
+    -fx-font-family: "Reem Kufi Bold";
+    -fx-font-size: 15px;
+    -fx-font-style: normal;
+    -fx-font-weight: 700;
+    -fx-text-alignment: center;
+}
+
+.btn-cancel {
+    -fx-font-family: "Reem Kufi Bold";
+    -fx-font-size: 15px;
+    -fx-font-style: normal;
+    -fx-font-weight: 700;
+    -fx-text-alignment: center;
+}
+
+.btn-red {
+    -fx-background-color: #EC4B4B;
+    -fx-background-radius: 24px;
+
+    -fx-font-family: "Reem Kufi Bold";
+    -fx-font-size: 15px;
+    -fx-font-style: normal;
+    -fx-font-weight: 700;
+    -fx-text-alignment: center;
+}
+
+.header_text {
+    -fx-font-family: "Reem Kufi Bold";
+    -fx-font-size: 34px;
+    -fx-font-style: normal;
+    -fx-font-weight: 700;
+    -fx-text-alignment: center;
+}
+
+.subheader_text {
+    -fx-font-family: "Inter Regular";
+    -fx-font-size: 16px;
+    -fx-font-style: normal;
+    -fx-font-weight: 400;
+    -fx-text-alignment: center;
+}
+
+.fieldHeader_text {
+    -fx-font-family: "Reem Kufi SemiBold";
+    -fx-font-size: 13px;
+    -fx-font-style: normal;
+    -fx-font-weight: 600;
+    -fx-text-alignment: left;
+}
+
+.field {
+    -fx-font-family: "Inter";
+    -fx-font-size: 13px;
+    -fx-font-style: normal;
+    -fx-font-weight: 400;
+    -fx-text-alignment: center;
+    -fx-text-fill: #adadad;
+
+    -fx-border-color: #e3e3e3;
+    -fx-border-width: 2.5;
+    -fx-border-radius: 6px;
+    -fx-background-radius: 7px;
+    -fx-background-color: #f3f3f3;
+}
+
+.field:focused {
+    -fx-text-fill: #1B1B1B;
+
+    -fx-border-color: linear-gradient(from 30% 30% to 70% 70%, #0085FF, #3B9EFA);
+    -fx-background-color: #FFFFFF;
+}

@@ -1,0 +1,82 @@
+@font-face {
+    src: url(../fonts/ReemKufi-SemiBold.ttf);
+}
+
+@font-face {
+    src: url(../fonts/ReemKufi-Bold.ttf);
+}
+
+@font-face {
+    src: url(../fonts/Inter-Regular.ttf);
+}
+
+@font-face {
+    src: url(../fonts/Inter-Bold.ttf);
+}
+
+.overlay-panel {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 12px;
+}
+
+.dim-background {
+    -fx-background-color: rgba(65, 65, 65, 0.8);
+}
+
+.btn-gradient {
+    -fx-background-color: linear-gradient(from 30% 30% to 70% 70%, #0085FF, #3B9EFA);
+    -fx-background-radius: 8px;
+
+    -fx-font-family: "Reem Kufi Bold";
+    -fx-font-size: 31px;
+    -fx-font-style: normal;
+    -fx-font-weight: 700;
+    -fx-text-alignment: center;
+}
+
+.btn-orange {
+    -fx-background-color: #F28622;
+    -fx-background-radius: 8px;
+
+    -fx-font-family: "Reem Kufi Bold";
+    -fx-font-size: 31px;
+    -fx-font-style: normal;
+    -fx-font-weight: 700;
+    -fx-text-alignment: center;
+}
+
+.btn-cancel {
+    -fx-font-family: "Reem Kufi Bold";
+    -fx-font-size: 15px;
+    -fx-font-style: normal;
+    -fx-font-weight: 700;
+    -fx-text-alignment: center;
+}
+
+.btn-back {
+    -fx-background-color: transparent;
+    -fx-border-color: #1B1B1B;
+    -fx-border-width: 3px;
+    -fx-border-radius: 360px;
+
+    -fx-font-family: "Inter";
+    -fx-font-size: 26px;
+    -fx-font-style: normal;
+    -fx-font-weight: 700;
+}
+
+.header_text {
+    -fx-font-family: "Inter Bold";
+    -fx-font-size: 34px;
+    -fx-font-style: normal;
+    -fx-font-weight: 700;
+    -fx-text-alignment: center;
+}
+
+.subheader_text {
+    -fx-font-family: "Inter Regular";
+    -fx-font-size: 20px;
+    -fx-font-style: normal;
+    -fx-font-weight: 400;
+    -fx-text-alignment: center;
+}

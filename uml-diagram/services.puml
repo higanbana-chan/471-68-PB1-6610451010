@@ -1,0 +1,76 @@
+@startuml
+interface cs211.project.services.Datasource {
+~ T readData()
+~ void writeData(T)
+}
+class cs211.project.services.CustomTableRow {
+- {static} double CUSTOM_ROW_HEIGHT
++ <<Create>> CustomTableRow()
+}
+class cs211.project.services.EventsDetailListFileDatasource {
+- String directoryName
+- String fileName
++ <<Create>> EventsDetailListFileDatasource(String,String)
+- void checkFileIsExisted()
++ EventScheduleList readData()
++ void writeData(EventScheduleList)
+}
+class cs211.project.services.RoleListFileDatasource {
+- String directoryName
+- String fileName
++ <<Create>> RoleListFileDatasource(String,String)
+- void checkFileIsExisted()
++ RoleCollection readData()
++ void writeData(RoleCollection)
+}
+class cs211.project.services.EventDateComparator {
++ int compare(Event,Event)
+}
+class cs211.project.services.AllTeamListFileDatasource {
+- String directoryName
+- String fileName
++ <<Create>> AllTeamListFileDatasource(String,String)
+- void checkFileIsExisted()
++ TeamList readData()
++ void writeData(TeamList)
+}
+class cs211.project.services.UserAccountDatasource {
+- String directoryName
+- String fileName
+- String filePath
++ <<Create>> UserAccountDatasource(String,String)
+- void checkFileIsExisted()
++ AccountCollection readData()
++ void writeData(AccountCollection)
+}
+class cs211.project.services.EventListFileDatasource {
+- String directoryName
+- String fileName
++ <<Create>> EventListFileDatasource(String,String)
+- void checkFileIsExisted()
++ EventCollection readData()
++ void writeData(EventCollection)
+}
+interface cs211.project.services.DataReceivable {
+~ void setData(Object)
+}
+class cs211.project.services.TeamScheduleListFileDatasource {
+- String directoryName
+- String fileName
++ <<Create>> TeamScheduleListFileDatasource(String,String)
+- void checkFileIsExisted()
++ TeamScheduleCollection readData()
++ void writeData(TeamScheduleCollection)
+}
+
+
+javafx.scene.control.TableRow <|-- cs211.project.services.CustomTableRow
+cs211.project.services.Datasource <|.. cs211.project.services.EventsDetailListFileDatasource
+cs211.project.services.Datasource <|.. cs211.project.services.RoleListFileDatasource
+java.util.Comparator <|.. cs211.project.services.EventDateComparator
+cs211.project.services.Datasource <|.. cs211.project.services.AllTeamListFileDatasource
+cs211.project.services.Datasource <|.. cs211.project.services.UserAccountDatasource
+cs211.project.services.Datasource <|.. cs211.project.services.EventListFileDatasource
+cs211.project.services.FXRouter +.. cs211.project.services.FXRouter$RouteScene
+cs211.project.services.Datasource <|.. cs211.project.services.TeamScheduleListFileDatasource
+@enduml

@@ -1,0 +1,266 @@
+@startuml
+class cs211.project.models.Event {
+- String id
+- String name
+- String poster
+- String detail
+- String start
+- String end
+- String type
+- String location
+- String organizer
+- int currParticipants
+- int maxParticipants
+- AccountCollection participantList
+- EventScheduleList scheduleList
+- TeamList teamList
++ {static} UUID nextEventId
++ <<Create>> Event(String,String,String,String,String,String,String,String,String,int,int)
++ boolean isOrganizer(String)
++ boolean isUserJoin(String)
++ String getId()
++ String getName()
++ void setName(String)
++ String getPoster()
++ String getDetail()
++ void setDetail(String)
++ String getStart()
++ void setStart(String)
++ String getEnd()
++ void setEnd(String)
++ String getType()
++ String getLocation()
++ void setLocation(String)
++ int getCurrParticipants()
++ void setCurrParticipants(boolean)
++ int getMaxParticipants()
++ void setMaxParticipants(int)
++ AccountCollection getParticipantList()
++ EventScheduleList getScheduleList()
++ TeamList getTeamList()
++ String getOrganizer()
++ {static} String getNextEventId()
+}
+class cs211.project.models.collections.EventScheduleList {
+- ArrayList<EventSchedule> eventSchedules
++ <<Create>> EventScheduleList()
++ void addNewEventsDetail(String,String,String,String)
++ EventSchedule findEventDetailById(long)
++ void setTimeById(long,String)
++ void setDetailById(long,String)
++ void setNameById(long,String)
++ ArrayList<EventSchedule> getEventDetails()
+}
+class cs211.project.models.collections.TeamScheduleCollection {
+- ArrayList<TeamSchedule> teamSchedules
++ <<Create>> TeamScheduleCollection()
++ void addNewTeamSchedule(String,String,String,String,String,String)
++ TeamSchedule findTeamScheduleById(String)
++ void setNameActTeamScheduleById(String,String)
++ void setDetailById(String,String)
++ void setStatusById(String,String)
++ ArrayList<TeamSchedule> getTeamSchedules()
+}
+class cs211.project.models.Postable {
+# String postDetails
++ <<Create>> Postable()
++ <<Create>> Postable(String)
++ String getPostDetails()
++ void setPostDetails(String)
+}
+class cs211.project.models.ShowNameAndRole {
+- String firstName
+- String lastName
+- String username
+- String role
++ <<Create>> ShowNameAndRole(String,String,String,String)
++ String getFirstName()
++ String getLastName()
++ String getUsername()
++ String getRole()
+}
+class cs211.project.models.Comment {
+- int id
+- int postId
+- String commentDetail
++ <<Create>> Comment(String)
++ <<Create>> Comment(int,int,String)
++ int getId()
++ int getPostId()
++ String getCommentDetail()
+}
+class cs211.project.models.Community {
+- int id
+- String postDetail
+- {static} String post_csv_path
++ <<Create>> Community(int,String)
++ <<Create>> Community(String)
++ int getId()
++ String getPostDetail()
++ {static} List<Community> getAllPosts()
++ void addPostToCSV()
+- int getNextId()
+}
+class cs211.project.models.TeamSchedule {
+- String nameAct_teamSchedule
+- String detail
+- String status
+- String idRecord
++ {static} long nextTeamScheduleId
+- String eventId
+- String teamId
++ <<Create>> TeamSchedule(String,String,String,String,String,String)
++ String getNameAct_teamSchedule()
++ String getStatus()
++ String getDetail()
++ String getIdRecord()
++ String getEventId()
++ String getTeamId()
++ void setNameAct_teamSchedule(String)
++ void setDetail(String)
++ void setStatus(String)
+}
+class cs211.project.models.Team {
+- String teamName
+- int capacity
+- String start
+- String end
+- String teamId
++ {static} long nextTeamId
+- String eventId
+- TeamScheduleCollection teamScheduleCollection
+- AccountCollection members
++ <<Create>> Team(String,String,int,String,String,String)
++ boolean isUserJoin(String)
++ void setTeamName(String)
++ void setCapacity(int)
++ String getTeamId()
++ String getTeamName()
++ int getCapacity()
++ Integer getTeamCapacity()
++ String getEventId()
++ String getStart()
++ String getEnd()
++ boolean recruit()
++ TeamScheduleCollection getTeamScheduleCollection()
++ AccountCollection getMembers()
+}
+class cs211.project.models.Role {
+~ String username
+~ String eventId
+~ String role
++ <<Create>> Role(String,String,String)
++ String getUsername()
++ String getEventId()
++ String getRole()
++ void setRole(String)
+}
+class cs211.project.models.EventSchedule {
+- String time
+- String nameAct
+- String detail
+- long idRecord
+- {static} long nextId
+- String eventId
++ <<Create>> EventSchedule(String,String,String,String)
++ void setTime(String)
++ void setDetail(String)
++ void setNameAct(String)
++ boolean isId(long)
++ String getDetail()
++ String getNameAct()
++ String getTime()
++ String getEventId()
++ long getIdRecord()
+}
+class cs211.project.models.collections.TeamList {
+- ArrayList<Team> teams
++ <<Create>> TeamList()
++ void addNewTeam(String,String,int,String,String,String)
++ void addNewTeam(Team)
++ void addUserToTeam(AccountCollection,RoleCollection)
++ Team findTeamByTeamId(String)
++ Team findTeamByTeamName(String)
++ void setTeamNameById(String,String)
++ void setCapacityById(String,int)
++ ArrayList<Team> getTeams()
+}
+class cs211.project.models.UserAccount {
+- String username
+- String password
+- String email
+- String firstName
+- String lastName
+- String accountType
+- String lastLoggedIn
+- String registeredDate
+- String imgPath
++ <<Create>> UserAccount(String,String,String,String,String)
++ <<Create>> UserAccount(String,String,String,String,String,String,String)
++ <<Create>> UserAccount(String,String,String,String,String,String,String,String,String)
++ String getUsername()
++ String getPassword()
++ String getEmail()
++ String getFirstName()
++ String getLastName()
++ String getAccountType()
++ String getRegisteredDate()
++ String getLastLoggedIn()
++ String getImgPath()
++ void setPassword(String)
++ void setEmail(String)
++ void setAccountName(String,String)
++ void setLastLoggedIn()
+- void setRegisteredDate()
++ void setImgPath(String)
++ boolean validatePassword(String)
+}
+class cs211.project.models.collections.RoleCollection {
+- List<Role> roles
++ <<Create>> RoleCollection()
++ void addRole(String,String,String)
++ Role findUserByEventIdAndUsername(String,String)
++ Role findUserByUsername(String)
++ boolean findLeaderInTeam(String)
++ boolean isUserJoinTeam(String,String,TeamList)
++ boolean isUserTeamBan(String,String,TeamList)
++ void setRoleByEventIdAndUsername(String,String,String)
++ boolean findUserBan(String,String)
++ List<Role> getRoles()
+}
+class cs211.project.models.collections.ShowNameAndRoleCollection {
+- List<ShowNameAndRole> items
++ <<Create>> ShowNameAndRoleCollection()
++ void addShowNameAndRole(ShowNameAndRole)
++ List<ShowNameAndRole> getItems()
+}
+class cs211.project.models.collections.AccountCollection {
+- ArrayList<UserAccount> user_accounts
++ <<Create>> AccountCollection()
++ void addAccount(UserAccount)
++ UserAccount findAccount(String)
++ UserAccount findEmail(String)
++ void changePassword(String,String)
++ void changeEmail(String,String)
++ void changeProfileImage(String,String)
++ void changeAccountName(String,String,String)
++ UserAccount login(String,String)
++ ArrayList<UserAccount> getUserAccounts()
+}
+class cs211.project.models.collections.EventCollection {
+- ArrayList<Event> events
++ <<Create>> EventCollection()
++ void addEvent(String,String,String,String,String,String,String,String,String,int,int)
++ void addEvent(Event)
++ void addUserToEvent(AccountCollection,RoleCollection)
++ void setCurrentParticipant(String)
++ Event findEventById(String)
++ void sortEventByEndDate(ArrayList<Event>,Comparator<Event>)
++ EventCollection findEventByName(String)
++ ArrayList<Event> getEvents()
+}
+
+
+cs211.project.models.Postable <|-- cs211.project.models.Comment
+cs211.project.models.Postable <|-- cs211.project.models.Community
+@enduml

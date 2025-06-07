@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#onEscKeyPressed" prefHeight="750.0" prefWidth="1200.0" stylesheets="@../css/settings.css" xmlns="http://javafx.com/javafx/17.0.6" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cs211.project.controllers.SettingsController">
+   <children>
+      <BorderPane prefHeight="750.0" prefWidth="1200.0">
+         <left>
+            <AnchorPane BorderPane.alignment="CENTER">
+               <children>
+                  <Pane prefHeight="750.0" prefWidth="486.0" styleClass="side_pane" />
+                  <VBox prefHeight="750.0" prefWidth="486.0">
+                     <children>
+                        <Pane prefHeight="32.0" prefWidth="200.0" />
+                        <HBox prefHeight="11.0" prefWidth="486.0">
+                           <children>
+                              <Pane prefHeight="200.0" prefWidth="94.0" />
+                              <Text fill="#1b1b1b" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="header-side" text="ACCOUNT SETTINGS" wrappingWidth="155.640625" />
+                           </children>
+                        </HBox>
+                        <Pane prefHeight="12.0" prefWidth="200.0" />
+                        <HBox prefHeight="54.0" prefWidth="200.0">
+                           <children>
+                              <Pane prefHeight="200.0" prefWidth="91.0" />
+                              <ToggleButton fx:id="myAccountButton" mnemonicParsing="false" onAction="#onMyAccountButtonClick" prefHeight="54.0" prefWidth="374.0" styleClass="btn-side" text="My Account" textFill="#1b1b1b">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="navButton" />
+                                 </toggleGroup>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></ToggleButton>
+                           </children>
+                        </HBox>
+                        <Pane prefHeight="5.0" prefWidth="200.0" />
+                        <HBox prefHeight="54.0">
+                           <children>
+                              <Pane prefHeight="200.0" prefWidth="91.0" />
+                              <ToggleButton fx:id="myProfileButton" mnemonicParsing="false" onAction="#onMyProfileButtonClick" prefHeight="54.0" prefWidth="374.0" styleClass="btn-side" text="Profile" textFill="#1b1b1b" toggleGroup="$navButton">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></ToggleButton>
+                           </children>
+                        </HBox>
+                        <Pane prefHeight="86.0" prefWidth="200.0" />
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </left>
+         <center>
+            <AnchorPane prefWidth="588.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane prefHeight="750.0" prefWidth="620.0" />
+                  <HBox prefHeight="750.0" prefWidth="620.0">
+                     <children>
+                        <AnchorPane fx:id="mainPane" prefHeight="750.0" prefWidth="705.0" />
+                        <VBox alignment="TOP_CENTER">
+                           <children>
+                              <Pane prefHeight="25.0" prefWidth="200.0" />
+                              <Button fx:id="backButton" mnemonicParsing="false" onAction="#onBackButtonClick" onKeyPressed="#onEscKeyPressed" prefHeight="54.0" prefWidth="54.0" styleClass="btn-back" text="X">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></Button>
+                              <Pane prefHeight="7.0" prefWidth="200.0" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="normal_text-small" text="ESC" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+      <AnchorPane fx:id="popupPane" prefHeight="750.0" prefWidth="1200.0" visible="false" />
+   </children>
+</AnchorPane>

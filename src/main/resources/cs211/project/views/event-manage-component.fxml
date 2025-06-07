@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox fx:id="eventManageBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="175.0" prefWidth="990.0" style="-fx-background-color: #ffffff;" styleClass="bg-radius" stylesheets="@css/style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cs211.project.controllers.EventManageComponentController">
+   <children>
+      <VBox prefHeight="175.0" prefWidth="250.0">
+         <children>
+            <Label fx:id="eventNameLabel" text="eventNameLabel" textFill="#86c4fc">
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="roleLabel" text="roleLabel" textFill="#86c4fc">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+         <padding>
+            <Insets left="30.0" />
+         </padding>
+      </VBox>
+      <VBox prefHeight="175.0" prefWidth="250.0">
+         <children>
+            <Label fx:id="dateLabel" text="dateLabel" textFill="#86c4fc">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="teamNameLabel" text="teamNameLabel" textFill="#86c4fc">
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <HBox fx:id="buttonBox" alignment="CENTER_RIGHT" fillHeight="false" prefHeight="175.0" prefWidth="500.0">
+         <children>
+            <Button fx:id="scheduleButton" mnemonicParsing="false" prefHeight="66.0" prefWidth="177.0" style="-fx-background-color: #AF22F2;" styleClass="bg-radius" stylesheets="@css/style.css" text="schedule" textFill="WHITE">
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="detailButton" mnemonicParsing="false" prefHeight="66.0" prefWidth="122.0" style="-fx-background-color: #F28622;" styleClass="bg-radius" text="detail" textFill="WHITE">
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="editButton" mnemonicParsing="false" prefHeight="66.0" prefWidth="114.0" style="-fx-background-color: #22A7F2;" styleClass="bg-radius" text="edit" textFill="WHITE">
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+         <HBox.margin>
+            <Insets />
+         </HBox.margin>
+      </HBox>
+   </children>
+</HBox>

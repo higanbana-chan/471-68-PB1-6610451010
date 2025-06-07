@@ -1,0 +1,75 @@
+@font-face {
+    src: url(../fonts/ReemKufi-SemiBold.ttf);
+}
+
+@font-face {
+    src: url(../fonts/ReemKufi-Bold.ttf);
+}
+
+@font-face {
+    src: url(../fonts/Inter-Regular.ttf);
+}
+
+@font-face {
+    src: url(../fonts/Inter-Bold.ttf);
+}
+
+.overlay-panel {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 11px;
+    -fx-effect: dropshadow(two-pass-box, rgba(0, 0, 0, 0.15), 10, 0, 0, 0);
+}
+
+.btn-gradient {
+    -fx-background-color: linear-gradient(from 30% 30% to 70% 70%, #0085FF, #3B9EFA);
+    -fx-background-radius: 11px;
+
+    -fx-font-family: "Reem Kufi";
+    -fx-font-size: 20px;
+    -fx-font-style: normal;
+    -fx-font-weight: 700;
+    -fx-text-alignment: center;
+}
+
+.btn-lightblue {
+    -fx-background-color: #86C4FC;
+    -fx-background-radius: 11px;
+
+    -fx-font-family: "Reem Kufi";
+    -fx-font-size: 20px;
+    -fx-font-style: normal;
+    -fx-font-weight: 700;
+    -fx-text-alignment: center;
+}
+
+.header_text {
+    -fx-font-family: "Inter Bold";
+    -fx-font-size: 27px;
+    -fx-font-style: normal;
+    -fx-font-weight: 700;
+    -fx-text-alignment: center;
+}
+
+.subheader_text {
+    -fx-font-family: "Inter Regular";
+    -fx-font-size: 14px;
+    -fx-font-style: normal;
+    -fx-font-weight: 400;
+    -fx-text-alignment: center;
+}
+
+.attend_text {
+    -fx-font-family: "Inter Bold";
+    -fx-font-size: 27px;
+    -fx-font-style: normal;
+    -fx-font-weight: 700;
+    -fx-text-alignment: right;
+}
+
+.attend_subtext {
+    -fx-font-family: "Inter Bold";
+    -fx-font-size: 11px;
+    -fx-font-style: normal;
+    -fx-font-weight: 700;
+    -fx-text-alignment: right;
+}

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="750.0" prefWidth="567.0" stylesheets="@../css/settings.css" xmlns="http://javafx.com/javafx/17.0.6" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cs211.project.controllers.ProfileSettingsController">
+   <children>
+      <VBox prefHeight="750.0" prefWidth="567.0">
+         <children>
+            <Pane prefHeight="34.0" prefWidth="566.0" />
+            <HBox prefHeight="27.0" prefWidth="0.0">
+               <children>
+                  <Pane prefHeight="27.0" prefWidth="28.0" />
+                  <Text fill="#1b1b1b" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="header-main" text="Profile" />
+               </children>
+            </HBox>
+            <Pane prefHeight="29.0" prefWidth="566.0" />
+            <HBox prefHeight="173.0">
+               <children>
+                  <Pane prefHeight="200.0" prefWidth="28.0" />
+                  <Circle fx:id="imgCircle" fill="WHITE" onMouseClicked="#handleUploadClick" radius="90.0" strokeType="INSIDE" strokeWidth="6.0">
+                     <stroke>
+                        <LinearGradient endX="0.8720379146919431" endY="0.5118483412322274" startX="0.3127962085308057" startY="0.30805687203791465">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color green="0.5215686559677124" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.23137255012989044" green="0.6196078658103943" blue="0.9803921580314636" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </stroke>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Circle>
+                  <Pane prefHeight="200.0" prefWidth="29.0" />
+                  <VBox prefHeight="173.0" prefWidth="337.0">
+                     <children>
+                        <Pane prefHeight="45.0" prefWidth="337.0" />
+                        <Label fx:id="nameLabel" prefHeight="30.0" prefWidth="337.0" styleClass="account_name" text="nameLabel" textFill="#1b1b1b" />
+                        <Pane prefHeight="13.0" prefWidth="200.0" />
+                        <Button fx:id="changeImgButton" mnemonicParsing="false" onMouseClicked="#handleUploadClick" prefHeight="38.0" prefWidth="183.0" styleClass="btn-gradient" text="CHANGE IMAGE" textFill="WHITE">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Button>
+                        <Pane prefHeight="26.0" prefWidth="391.0" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <Pane prefHeight="44.0" prefWidth="200.0" />
+            <HBox prefHeight="15.0" prefWidth="567.0">
+               <children>
+                  <Pane prefHeight="27.0" prefWidth="28.0" />
+                  <Text fx:id="nameText" fill="#575757" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="edit-header" text="DISPLAY NAME" wrappingWidth="540.1240005493164" />
+               </children>
+            </HBox>
+            <Pane prefHeight="10.0" prefWidth="200.0" />
+            <HBox prefHeight="50.0" prefWidth="200.0">
+               <children>
+                  <Pane prefHeight="200.0" prefWidth="28.0" />
+                  <VBox prefHeight="50.0" prefWidth="538.0" styleClass="edit-section">
+                     <children>
+                        <TextField fx:id="nameField" prefHeight="50.0" prefWidth="538.0" styleClass="edit-field">
+                           <font>
+                              <Font name="Inter Medium" size="21.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <Pane prefHeight="16.0" prefWidth="200.0" />
+            <HBox prefHeight="38.0" prefWidth="275.0">
+               <children>
+                  <Pane prefHeight="38.0" prefWidth="467.0" />
+                  <Button fx:id="saveButton" mnemonicParsing="false" onAction="#onSaveButtonClick" prefHeight="37.0" prefWidth="99.0" styleClass="btn-light-blue" text="SAVE" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

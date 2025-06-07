@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane stylesheets="@css/style.css" xmlns="http://javafx.com/javafx/17.0.6" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cs211.project.controllers.MainPageController">
+   <children>
+      <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1200.0">
+         <left>
+            <HBox BorderPane.alignment="CENTER">
+               <children>
+                  <VBox prefHeight="750.0" prefWidth="100.0" styleClass="navbar" stylesheets="@css/style.css">
+                     <children>
+                        <Pane prefHeight="32.0" prefWidth="100.0" stylesheets="@css/style.css" />
+                        <HBox alignment="CENTER" prefHeight="33.0" prefWidth="100.0">
+                           <children>
+                              <ImageView fitHeight="33.0" fitWidth="74.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@img/project-logo.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                        <Pane prefHeight="152.0" prefWidth="100.0" />
+                        <HBox alignment="CENTER" prefHeight="45.0" prefWidth="100.0">
+                           <children>
+                              <ImageView fitHeight="45.0" fitWidth="45.0" onMouseClicked="#onHomeButtonClick" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@img/home-icon.png" />
+                                 </image>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                        <Pane prefHeight="91.0" prefWidth="100.0" />
+                        <HBox alignment="CENTER" prefHeight="45.0" prefWidth="100.0">
+                           <children>
+                              <ImageView fitHeight="45.0" fitWidth="45.0" onMouseClicked="#onClickJoinedButton" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@img/group-icon.png" />
+                                 </image>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                        <Pane prefHeight="91.0" prefWidth="100.0" />
+                        <HBox alignment="CENTER" prefHeight="45.0" prefWidth="100.0">
+                           <children>
+                              <ImageView fitHeight="45.0" fitWidth="45.0" onMouseClicked="#onManageEventClick" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@img/calendar_icon.png" />
+                                 </image>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                        <Pane prefHeight="139.0" prefWidth="100.0" />
+                        <HBox alignment="CENTER" prefHeight="45.0" prefWidth="100.0">
+                           <children>
+                              <Circle fx:id="imgCircle" fill="WHITE" onMouseClicked="#onClickUserProfile" radius="27.0" stroke="#ffffff00" strokeType="INSIDE">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Circle>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </left>
+         <center>
+            <StackPane BorderPane.alignment="CENTER">
+               <children>
+                  <ScrollPane fx:id="scrollPane" hbarPolicy="NEVER" prefHeight="200.0" prefWidth="1072.0" stylesheets="@css/style.css">
+                     <content>
+                        <AnchorPane prefHeight="751.0" prefWidth="1100.0">
+                           <children>
+                              <VBox fillWidth="false" prefHeight="152.0" prefWidth="1100.0">
+                                 <children>
+                                    <Pane prefHeight="26.0" prefWidth="38.0" />
+                                    <HBox alignment="CENTER_LEFT" fillHeight="false" prefHeight="37.0" prefWidth="1100.0">
+                                       <children>
+                                          <HBox>
+                                             <children>
+                                                <Pane prefHeight="33.0" prefWidth="38.0" />
+                                                <Button mnemonicParsing="false" onAction="#onClickCreateEventButton" prefHeight="46.0" prefWidth="221.0" styleClass="btn-gradient" stylesheets="@css/style.css" text="CREATE EVENT" textFill="WHITE">
+                                                   <font>
+                                                      <Font size="21.0" />
+                                                   </font>
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </Button>
+                                                <Pane prefHeight="33.0" prefWidth="434.0" />
+                                                <HBox alignment="CENTER_LEFT" fillHeight="false" prefHeight="65.0" prefWidth="375.0" spacing="10.0">
+                                                   <children>
+                                                      <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@img/filter-icon.png" />
+                                                         </image>
+                                                         <cursor>
+                                                            <Cursor fx:constant="HAND" />
+                                                         </cursor>
+                                                      </ImageView>
+                                                      <Pane prefHeight="69.0" prefWidth="14.0" />
+                                                      <TextField fx:id="searchTextField" alignment="CENTER" prefHeight="41.0" prefWidth="314.0" promptText="Search..." styleClass="search_field" />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </HBox>
+                                    <Pane prefHeight="33.0" prefWidth="1103.0" />
+                                    <HBox>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <children>
+                                          <Pane prefHeight="33.0" prefWidth="38.0" />
+                                          <Label prefHeight="30.0" prefWidth="304.0" styleClass="title_text" text="ONGOING EVENTS" textFill="#1b1b1b">
+                                             <font>
+                                                <Font size="32.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <GridPane fx:id="eventBox" layoutX="39.0" layoutY="175.0" prefHeight="26.0" prefWidth="62.0">
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                                 </rowConstraints>
+                              </GridPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </ScrollPane>
+                  <AnchorPane fx:id="confirmPane" visible="false">
+                     <children>
+                        <VBox alignment="CENTER" fillWidth="false" prefHeight="750.0" prefWidth="1100.0" styleClass="bg-gray" stylesheets="@css/join-overlay.css">
+                           <children>
+                              <VBox prefHeight="633.0" prefWidth="941.0" styleClass="bg-white">
+                                 <children>
+                                    <Pane prefHeight="45.0" prefWidth="200.0" />
+                                    <HBox prefHeight="19.0" prefWidth="941.0">
+                                       <children>
+                                          <Text fill="#1b1b1b" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="subheader_text" text="You’re joining event :" textAlignment="CENTER" wrappingWidth="941.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="85.0" prefWidth="941.0">
+                                       <children>
+                                          <Pane prefHeight="20.0" prefWidth="114.0" />
+                                          <Label fx:id="eventNameLabel" alignment="CENTER" prefHeight="87.0" prefWidth="713.0" styleClass="header_text" text="eventNameLabel" textAlignment="CENTER" />
+                                       </children>
+                                    </HBox>
+                                    <Pane prefHeight="7.0" prefWidth="941.0" />
+                                    <BorderPane prefHeight="291.0" prefWidth="941.0">
+                                       <center>
+                                          <ImageView fx:id="eventImage" fitHeight="276.0" fitWidth="500.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
+                                       </center>
+                                    </BorderPane>
+                                    <Pane prefHeight="18.0" prefWidth="941.0" />
+                                    <HBox prefHeight="19.0" prefWidth="941.0">
+                                       <children>
+                                          <Text fill="#1b1b1b" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="subheader_text" text="Which team do you which to join?" textAlignment="CENTER" wrappingWidth="941.0" />
+                                       </children>
+                                    </HBox>
+                                    <Pane prefHeight="25.0" prefWidth="941.0" />
+                                    <HBox prefHeight="79.0" prefWidth="941.0">
+                                       <children>
+                                          <Pane prefHeight="27.85" prefWidth="123.0" />
+                                          <Button fx:id="joinParticipantButton" mnemonicParsing="false" prefHeight="79.0" prefWidth="320.0" styleClass="btn-gradient" text="PARTICIPANT" textFill="WHITE">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Button>
+                                          <Pane prefHeight="27.85" prefWidth="55.0" />
+                                          <Button fx:id="joinMemberButton" mnemonicParsing="false" prefHeight="79.0" prefWidth="320.0" styleClass="btn-orange" text="TEAM MEMBER" textFill="WHITE">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                        <AnchorPane layoutX="800.0" layoutY="50.0" prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <VBox alignment="TOP_CENTER" layoutX="110.0" layoutY="19.0" prefHeight="112.0" prefWidth="59.0">
+                                 <children>
+                                    <Pane prefHeight="25.0" prefWidth="200.0" />
+                                    <Button mnemonicParsing="false" onAction="#onCloseButtonClick" prefHeight="54.0" prefWidth="54.0" styleClass="btn-back" stylesheets="@css/join-overlay.css" text="X">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+                                    <Pane prefHeight="7.0" prefWidth="200.0" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </StackPane>
+         </center>
+      </BorderPane>
+      <AnchorPane fx:id="focusOverlay" prefHeight="750.0" prefWidth="1200.0" visible="false" />
+      <AnchorPane fx:id="userSettingsAnchorPane" layoutX="113.0" layoutY="545.0" prefHeight="190.0" prefWidth="288.0" stylesheets="@css/account-overlay.css">
+         <children>
+            <VBox layoutY="1.0" prefHeight="190.0" prefWidth="297.0" styleClass="overlay-panel">
+               <children>
+                  <BorderPane>
+                     <center>
+                        <HBox alignment="CENTER" prefHeight="72.0" prefWidth="297.0" spacing="15.0">
+                           <children>
+                              <Label fx:id="nameLabel" alignment="CENTER" prefHeight="26.0" prefWidth="281.0" styleClass="account_text" text="nameLabel" textAlignment="CENTER" textFill="#1b1b1b">
+                                 <font>
+                                    <Font size="17.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </center>
+                  </BorderPane>
+                  <Separator prefWidth="200.0" />
+                  <Button fx:id="settingsButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSettingsButtonClick" prefHeight="58.0" prefWidth="312.0" styleClass="btn-settings" text="Settings" textFill="#1b1b1b">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#onClickLogoutButton" prefHeight="59.0" prefWidth="313.0" styleClass="btn-logout" text="Logout" textFill="WHITE">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,184 @@
+@font-face {
+    src: url(../fonts/ReemKufi-SemiBold.ttf);
+}
+
+@font-face {
+    src: url(../fonts/ReemKufi-Bold.ttf);
+}
+
+@font-face {
+    src: url(../fonts/Inter-Medium.ttf);
+}
+
+@font-face {
+    src: url(../fonts/Inter-SemiBold.ttf);
+}
+
+@font-face {
+    src: url(../fonts/Inter-Bold.ttf);
+}
+
+.root {
+    -main-gradient: linear-gradient(from 30% 30% to 70% 70%, #0085FF, #3B9EFA);
+}
+
+.side_pane {
+    -fx-background-color: #E8E8E8;
+}
+
+.header-side {
+    -fx-font-family: "Reem Kufi";
+    -fx-font-size: 14px;
+    -fx-font-style: normal;
+    -fx-font-weight: 700;
+}
+
+.dim-background {
+    -fx-background-color: rgba(65, 65, 65, 0.5);
+}
+
+.btn-gradient {
+    -fx-background-color: -main-gradient;
+    -fx-background-radius: 24px;
+
+    -fx-font-family: "Reem Kufi Bold";
+    -fx-font-size: 15px;
+    -fx-font-style: normal;
+    -fx-font-weight: 700;
+    -fx-text-alignment: center;
+}
+
+.btn-light-blue {
+    -fx-background-color: #86C4FC;
+    -fx-background-radius: 24px;
+
+    -fx-font-family: "Reem Kufi Bold";
+    -fx-font-size: 15px;
+    -fx-font-style: normal;
+    -fx-font-weight: 700;
+    -fx-text-alignment: center;
+}
+
+.btn-red {
+    -fx-background-color: #EC4B4B;
+    -fx-background-radius: 24px;
+
+    -fx-font-family: "Reem Kufi Bold";
+    -fx-font-size: 15px;
+    -fx-font-style: normal;
+    -fx-font-weight: 700;
+    -fx-text-alignment: center;
+}
+
+.btn-side {
+    -fx-background-color: transparent;
+    -fx-background-radius: 8px;
+    -fx-padding: 0 12px 0 16px;
+    -fx-alignment: center-left;
+    -fx-content-display: left;
+
+    -fx-font-family: "Inter SemiBold";
+    -fx-font-size: 21px;
+    -fx-font-style: normal;
+    -fx-font-weight: 600;
+}
+
+.btn-side:hover {
+    -fx-background-color: #D9D9D9;
+}
+
+.btn-side:selected {
+    -fx-background-color: #D9D9D9;
+    -fx-border-color: -main-gradient;
+    -fx-border-width: 0px 0px 0px 4px;
+    -fx-border-style: hidden hidden hidden solid;
+    -fx-border-insets: 8 0 7 -8;
+}
+
+.btn-side:selected:hover {
+    -fx-background-color: #cccccc
+}
+
+.btn-back {
+    -fx-background-color: transparent;
+    -fx-border-color: #1B1B1B;
+    -fx-border-width: 3px;
+    -fx-border-radius: 360px;
+
+    -fx-font-family: "Inter";
+    -fx-font-size: 26px;
+    -fx-font-style: normal;
+    -fx-font-weight: 700;
+}
+
+.normal_text-small {
+    -fx-font-family: "Inter";
+    -fx-font-size: 13px;
+    -fx-font-style: normal;
+    -fx-font-weight: 400;
+    -fx-text-alignment: center;
+}
+
+.header-main {
+    -fx-font-family: "Inter";
+    -fx-font-size: 28px;
+    -fx-font-style: normal;
+    -fx-font-weight: 700;
+}
+
+.header-main-smaller {
+    -fx-font-family: "Inter";
+    -fx-font-size: 24px;
+    -fx-font-style: normal;
+    -fx-font-weight: 700;
+}
+
+.edit-section {
+    -fx-background-color: #D9D9D9;
+    -fx-background-radius: 8px;
+}
+
+.edit-header {
+    -fx-font-family: "Reem Kufi Bold";
+    -fx-font-size: 12px;
+    -fx-font-style: normal;
+    -fx-font-weight: 600;
+}
+
+.edit-text {
+    -fx-font-family: "Inter Medium";
+    -fx-font-size: 21px;
+    -fx-font-style: normal;
+    -fx-font-weight: 500;
+}
+
+.edit-field {
+    -fx-background-color: #D9D9D9;
+    -fx-background-radius: 8px;
+}
+
+.btn-edit {
+    -fx-background-color: #575757;
+    -fx-background-radius: 4px;
+
+    -fx-font-family: "Reem Kufi";
+    -fx-font-size: 15px;
+    -fx-font-style: normal;
+    -fx-font-weight: 700;
+}
+
+.account_name {
+    -fx-font-family: "Inter Medium";
+    -fx-font-size: 27px;
+    -fx-font-style: normal;
+    -fx-font-weight: 500;
+    -fx-text-alignment: left;
+}
+
+.date_label {
+    -fx-font-family: "Inter Medium";
+    -fx-font-size: 15px;
+    -fx-font-style: normal;
+    -fx-font-weight: 500;
+    -fx-text-alignment: left;
+}

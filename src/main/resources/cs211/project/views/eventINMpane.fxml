@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="eventINMpane" prefHeight="72.0" prefWidth="510.0" stylesheets="@css/style.css" xmlns="http://javafx.com/javafx/17.0.6" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cs211.project.controllers.EventINMpaneController">
+    <styleClass>
+        <String fx:value="bg-gray" />
+        <String fx:value="bg-radius" />
+    </styleClass>
+    <children>
+        <AnchorPane fx:id="eventRole" layoutX="222.0" layoutY="10.0" prefHeight="52.0" prefWidth="223.0" stylesheets="@css/style.css">
+            <styleClass>
+                <String fx:value="bg-white" />
+                <String fx:value="bg-radius" />
+            </styleClass>
+            <children>
+                <Label fx:id="eventName1" layoutX="24.0" layoutY="10.0" text="ROLE" textFill="RED">
+                    <font>
+                        <Font name="System Bold" size="22.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+        <Label fx:id="eventName" layoutX="29.0" layoutY="17.0" text="EVENT">
+            <font>
+                <Font name="System Bold" size="26.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>
