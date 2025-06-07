@@ -15,8 +15,7 @@
     <a href="#-about">❓ About</a>‎ ‎ |‎ ‎ 
     <a href="#-sample-user-data">📋 Sample Data</a>‎ ‎ |‎ ‎ 
     <a href="#%EF%B8%8F-installation">⚙️ Installation</a>‎ ‎ |‎ ‎ 
-    <a href="#-files-structure">📁 Files Structure</a>‎ ‎ |‎ ‎ 
-    <a href="#-endcredit">🎓 End Credit</a>‎ ‎ |‎ ‎ 
+    <a href="#-files-structure">📁 Files Structure</a>‎ ‎ |‎ ‎  
     <b><a href="https://github.com/CS211-661/cs211-661-project-homo-sapien/blob/main/วิธีการใช้งานEventFiesta.pdf">📚 Read the manual</a></b><br>
 </p>
 
