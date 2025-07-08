@@ -263,4 +263,40 @@ class cs211.project.models.collections.EventCollection {
 
 cs211.project.models.Postable <|-- cs211.project.models.Comment
 cs211.project.models.Postable <|-- cs211.project.models.Community
+
+' Composition relationships - Event contains other objects
+cs211.project.models.Event *-- cs211.project.models.collections.AccountCollection : participantList
+cs211.project.models.Event *-- cs211.project.models.collections.EventScheduleList : scheduleList
+cs211.project.models.Event *-- cs211.project.models.collections.TeamList : teamList
+
+' Composition relationships - Team contains other objects
+cs211.project.models.Team *-- cs211.project.models.collections.AccountCollection : members
+cs211.project.models.Team *-- cs211.project.models.collections.TeamScheduleCollection : teamScheduleCollection
+
+' Association relationships - EventSchedule belongs to Event
+cs211.project.models.EventSchedule --> cs211.project.models.Event : eventId
+
+' Association relationships - TeamSchedule belongs to Event and Team
+cs211.project.models.TeamSchedule --> cs211.project.models.Event : eventId
+cs211.project.models.TeamSchedule --> cs211.project.models.Team : teamId
+
+' Association relationships - Team belongs to Event
+cs211.project.models.Team --> cs211.project.models.Event : eventId
+
+' Association relationships - Role connects UserAccount and Event
+cs211.project.models.Role --> cs211.project.models.UserAccount : username
+cs211.project.models.Role --> cs211.project.models.Event : eventId
+
+' Collection relationships - Collections contain their respective entities
+cs211.project.models.collections.AccountCollection o-- cs211.project.models.UserAccount : user_accounts
+cs211.project.models.collections.EventCollection o-- cs211.project.models.Event : events
+cs211.project.models.collections.TeamList o-- cs211.project.models.Team : teams
+cs211.project.models.collections.EventScheduleList o-- cs211.project.models.EventSchedule : eventSchedules
+cs211.project.models.collections.TeamScheduleCollection o-- cs211.project.models.TeamSchedule : teamSchedules
+cs211.project.models.collections.RoleCollection o-- cs211.project.models.Role : roles
+cs211.project.models.collections.ShowNameAndRoleCollection o-- cs211.project.models.ShowNameAndRole : items
+
+' ShowNameAndRole uses UserAccount information
+cs211.project.models.ShowNameAndRole ..> cs211.project.models.UserAccount : uses
+
 @enduml
